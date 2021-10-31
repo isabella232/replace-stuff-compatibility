@@ -28,12 +28,30 @@
 			var watermillGenerator = GetDatabaseThing("WatermillGenerator");
 			var largeWatermillGenerator = GetDatabaseThing("VFE_AdvancedWatermillGenerator");
 
+			var electricCrematorium = GetDatabaseThing("ElectricCrematorium");
+			var helexienCrematorium = GetDatabaseThing("VPE_GasCrematorium");
+			
+			var fueledStove = GetDatabaseThing("FueledStove");
+			var electricStove = GetDatabaseThing("ElectricStove");
+			var helixienStove = GetDatabaseThing("VPE_GasStove");
+
+			var biofuelRefinery = GetDatabaseThing("BiofuelRefinery");
+			var helixienRefinery = GetDatabaseThing("VPE_GasBiofuelRefinery");
+
+			MultiModPatch.Smelters.Add(GetDatabaseThing("VPE_GasSmelter"));
+			MultiModPatch.Smithys.Add(GetDatabaseThing("VPE_GasSmithy"));
+			MultiModPatch.Lights.Add(GetDatabaseThing("VPE_GasLamp"));
+			MultiModPatch.Lights.Add(GetDatabaseThing("VPE_GasFloodlight"));
+
 			AddInterchangeableList(battery, smallBattery, largeBattery, advancedBattery, largeAdvancedBattery);
 			AddInterchangeableList(solarGenerator, advancedSolarGenerator);
 			AddInterchangeableList(windTurbine, advancedWindTurbine);
 			AddInterchangeableList(woodGenerator, largeWoodGenerator, chemfuelGenerator, largeChemfuelGenerator,
 				helixienGenerator, largeHelixienGenerator);
 			AddInterchangeableList(watermillGenerator, largeWatermillGenerator);
+			AddInterchangeableList(electricCrematorium, helexienCrematorium);
+			AddInterchangeableList(fueledStove, electricStove, helixienStove);
+			AddInterchangeableList(biofuelRefinery, helixienRefinery);
 		}
 	}
 }

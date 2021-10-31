@@ -1,5 +1,27 @@
 ## Changelog
 
+### Version 1.2
+ - Core Game
+   - Research Bench / Hi-Tech Research Bench
+   - Fueled / Electric Smithy
+   - Lighting
+   - Braziers
+ - Vanilla Furniture Expanded (Core)
+   - Stone Campfire
+   - Lights
+   - Radios
+ - Vanilla Power Expanded
+   - Crematorium / Helixien Crematorium
+   - Helixien Smelter
+   - Helixien Stove
+   - Helixien Smithy
+   - Helixien Refinery
+   - Lights
+ - Vanilla Furniture Expanded - Production
+   - Fueled Smelter
+   - Electric Versions of Workbenches
+   - Assembly Bench
+
 ### Version 1.1
  - Vanilla Furniture Expanded - Security
    - Sandbags / Barbed Wire / Barricade / Barrier / Deployable Barrier

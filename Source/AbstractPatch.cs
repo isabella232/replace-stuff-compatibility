@@ -11,15 +11,16 @@ namespace Replace_Stuff_Compatibility
 	public abstract class AbstractPatch
 	{
 		[NotNull]
-		abstract protected string GetRequiredModNames();
+		protected abstract string GetRequiredModNames();
 
-		abstract protected void AddItems();
+		protected abstract void AddItems();
 
 		public void Patch()
 		{
 			var requiredModName = GetRequiredModNames();
-
-			if (!LoadedModManager.RunningModsListForReading.Exists(pack => pack.PackageId == requiredModName))
+			
+			LoadedModManager.RunningModsListForReading.ForEach(pack => Log.Message(pack.PackageId));
+			if (requiredModName != "" && !LoadedModManager.RunningModsListForReading.Exists(pack => pack.PackageId == requiredModName))
 			{
 				return;
 			}
@@ -29,7 +30,7 @@ namespace Replace_Stuff_Compatibility
 
 		protected static ThingDef GetDatabaseThing(string name) => DefDatabase<ThingDef>.GetNamed(name);
 
-		protected static Predicate<ThingDef> ListContainsThingDef(List<ThingDef> list)
+		private static Predicate<ThingDef> ListContainsThingDef(List<ThingDef> list)
 		{
 			return product => list.Exists(n => n == product);
 		}

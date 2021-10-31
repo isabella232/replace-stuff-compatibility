@@ -13,16 +13,27 @@ namespace Replace_Stuff_Compatibility
 #endif
 			new Harmony("Garethp.rimworld.Replace_Stuff_Compatibility.main").PatchAll();
 		}
-		
+
 		[StaticConstructorOnStartup]
 		public static class ModStartup
 		{
 			static ModStartup()
 			{
 				var patches = new List<AbstractPatch>()
-					{new SaveOurShip2(), new VanillaExpandedFurniture(), new VanillaExpandedSecurity(), new VanillaExpandedPower()};
-				
+				{
+					new CoreUpgrades(),
+					new RoyaltyUpgrades(),
+					new IdeologyUpgrades(),
+					new SaveOurShip2(),
+					new VanillaExpandedFurniture(),
+					new VanillaExpandedSecurity(), 
+					new VanillaExpandedPower(),
+					new VanillaFurnitureProduction()
+				};
+
 				patches.ForEach(patch => patch.Patch());
+				
+				(new MultiModPatch()).Patch();
 			}
 		}
 	}

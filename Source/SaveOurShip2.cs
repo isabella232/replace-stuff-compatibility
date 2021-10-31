@@ -13,11 +13,6 @@ namespace Replace_Stuff_Compatibility
 
 		protected override void AddItems()
 		{
-			if (!LoadedModManager.RunningModsListForReading.Exists(pack => pack.PackageId == "kentington.saveourship2"))
-			{
-				return;
-			}
-
 			var HullFoamWall = GetDatabaseThing("HullFoamWall");
 			var Ship_Beam_Unpowered = GetDatabaseThing("Ship_Beam_Unpowered");
 			var Ship_Beam = GetDatabaseThing("Ship_Beam");
