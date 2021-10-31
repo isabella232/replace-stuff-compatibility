@@ -19,7 +19,6 @@ namespace Replace_Stuff_Compatibility
 		{
 			var requiredModName = GetRequiredModNames();
 			
-			LoadedModManager.RunningModsListForReading.ForEach(pack => Log.Message(pack.PackageId));
 			if (requiredModName != "" && !LoadedModManager.RunningModsListForReading.Exists(pack => pack.PackageId == requiredModName))
 			{
 				return;
