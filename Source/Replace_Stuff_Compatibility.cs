@@ -28,7 +28,8 @@ namespace Replace_Stuff_Compatibility
 					new VanillaExpandedFurniture(),
 					new VanillaExpandedSecurity(), 
 					new VanillaExpandedPower(),
-					new VanillaFurnitureProduction()
+					new VanillaFurnitureProduction(),
+					new VanillaExpandedSpacer()
 				};
 
 				patches.ForEach(patch => patch.Patch());

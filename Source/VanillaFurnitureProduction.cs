@@ -20,10 +20,10 @@
 			
 			MultiModPatch.Smelters.Add(GetDatabaseThing("VFE_FueledSmelter"));
 
-			AddInterchangeableList(stoneCutter, electricStoneCutter);
-			AddInterchangeableList(fabricationBench, assemblyBench);
-			AddInterchangeableList(butchersTable, electricButchersTable);
-			AddInterchangeableList(drugLab, electricDrugLab);
+			AddInterchangeableWorkbenches(stoneCutter, electricStoneCutter);
+			AddInterchangeableWorkbenches(fabricationBench, assemblyBench);
+			AddInterchangeableWorkbenches(butchersTable, electricButchersTable);
+			AddInterchangeableWorkbenches(drugLab, electricDrugLab);
 		}
 	}
 }

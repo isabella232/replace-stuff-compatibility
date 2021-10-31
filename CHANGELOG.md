@@ -1,5 +1,19 @@
 ## Changelog
 
+### Version 1.3
+ - Core Game
+   - TVs
+   - All types of hydroponics from Core and Vanilla Furniture Expanded (Farming) should be interchangeable (And probably any other hydroponic mods)
+ - Vanilla Furniture Expanded (Power)
+   - Sunlamp
+ - Vanilla Furniture Expanded (Spacer)
+   - TVs
+   - End Table / Dresser
+ - Vanilla Furniture Expanded (Farming)
+   - Sunlamp
+ - Vanilla Furniture Expanded (Production)
+   - When replacing bench types, keep the same list of bills
+
 ### Version 1.2
  - Core Game
    - Research Bench / Hi-Tech Research Bench

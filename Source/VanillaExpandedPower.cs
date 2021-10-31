@@ -38,10 +38,13 @@
 			var biofuelRefinery = GetDatabaseThing("BiofuelRefinery");
 			var helixienRefinery = GetDatabaseThing("VPE_GasBiofuelRefinery");
 
-			MultiModPatch.Smelters.Add(GetDatabaseThing("VPE_GasSmelter"));
-			MultiModPatch.Smithys.Add(GetDatabaseThing("VPE_GasSmithy"));
 			MultiModPatch.Lights.Add(GetDatabaseThing("VPE_GasLamp"));
 			MultiModPatch.Lights.Add(GetDatabaseThing("VPE_GasFloodlight"));
+			
+			MultiModPatch.Smelters.Add(GetDatabaseThing("VPE_GasSmelter"));
+			MultiModPatch.Smithys.Add(GetDatabaseThing("VPE_GasSmithy"));
+
+			MultiModPatch.Sunlamps.Add(GetDatabaseThing("VPE_GasSunLamp"));
 
 			AddInterchangeableList(battery, smallBattery, largeBattery, advancedBattery, largeAdvancedBattery);
 			AddInterchangeableList(solarGenerator, advancedSolarGenerator);
