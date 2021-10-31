@@ -1,4 +1,5 @@
-﻿using HarmonyLib;
+﻿using System.Collections.Generic;
+using HarmonyLib;
 using Verse;
 
 namespace Replace_Stuff_Compatibility
@@ -18,8 +19,10 @@ namespace Replace_Stuff_Compatibility
 		{
 			static ModStartup()
 			{
-				Replace_Stuff_Compatibility.SaveOurShip2.Patch();
-				VanillaExpandedFurniture.Patch();
+				var patches = new List<AbstractPatch>()
+					{new SaveOurShip2(), new VanillaExpandedFurniture(), new VanillaExpandedSecurity(), new VanillaExpandedPower()};
+				
+				patches.ForEach(patch => patch.Patch());
 			}
 		}
 	}

@@ -7,52 +7,49 @@ using Verse;
 
 namespace Replace_Stuff_Compatibility
 {
-	public class SaveOurShip2
-	{ 
-		private static Predicate<ThingDef> ListContainsThingDef(List<ThingDef> list)
-		{
-			return product => list.Exists(n => n == product);
-		}
+	public class SaveOurShip2 : AbstractPatch
+	{
+		protected override string GetRequiredModNames() => "kentington.saveourship2";
 
-		public static void Patch()
+		protected override void AddItems()
 		{
 			if (!LoadedModManager.RunningModsListForReading.Exists(pack => pack.PackageId == "kentington.saveourship2"))
 			{
 				return;
 			}
-			
-			var HullFoamWall = DefDatabase<ThingDef>.GetNamed("HullFoamWall");
-			var Ship_Beam_Unpowered = DefDatabase<ThingDef>.GetNamed("Ship_Beam_Unpowered");
-			var Ship_Beam = DefDatabase<ThingDef>.GetNamed("Ship_Beam");
-			var Ship_BeamArchotech_Unpowered = DefDatabase<ThingDef>.GetNamed("Ship_BeamArchotech_Unpowered");
-			var Ship_BeamArchotech = DefDatabase<ThingDef>.GetNamed("Ship_BeamArchotech");
-			var ShipAirlock = DefDatabase<ThingDef>.GetNamed("ShipAirlock");
-			var ShipAirlockArchotech = DefDatabase<ThingDef>.GetNamed("ShipAirlockArchotech");
-			
-			var ShipInside_PassiveCooler = DefDatabase<ThingDef>.GetNamed("ShipInside_PassiveCooler");
-			var ShipInside_PassiveCoolerAdvanced = DefDatabase<ThingDef>.GetNamed("ShipInside_PassiveCoolerAdvanced");
-			var ShipInside_PassiveCoolerArchotech = DefDatabase<ThingDef>.GetNamed("ShipInside_PassiveCoolerArchotech");
-			
-			var ShipInside_PassiveVent = DefDatabase<ThingDef>.GetNamed("ShipInside_PassiveVent");
-			var ShipInside_PassiveVentArchotech = DefDatabase<ThingDef>.GetNamed("ShipInside_PassiveVentArchotech");
-			
-			var ShipInside_SolarGenerator = DefDatabase<ThingDef>.GetNamed("ShipInside_SolarGenerator");
-			var ShipInside_SolarGeneratorArchotech = DefDatabase<ThingDef>.GetNamed("ShipInside_SolarGeneratorArchotech");
-			
-			var Ship_Reactor = DefDatabase<ThingDef>.GetNamed("Ship_Reactor");
-			var ArchotechAntimatterReactor = DefDatabase<ThingDef>.GetNamed("ArchotechAntimatterReactor");
 
-			var ShipCombatShieldGenerator = DefDatabase<ThingDef>.GetNamed("ShipCombatShieldGenerator");
-			var ArchotechShieldGenerator = DefDatabase<ThingDef>.GetNamed("ArchotechShieldGenerator");
-			
-			var ShipHeatsink = DefDatabase<ThingDef>.GetNamed("ShipHeatsink");
-			var ShipHeatManifold = DefDatabase<ThingDef>.GetNamed("ShipHeatManifold");
-			var ShipHeatsinkAntiEntropy = DefDatabase<ThingDef>.GetNamed("ShipHeatsinkAntiEntropy");
-			
-			var Holodeck_Basic = DefDatabase<ThingDef>.GetNamed("Holodeck_Basic");
-			var Holodeck_Standard = DefDatabase<ThingDef>.GetNamed("Holodeck_Standard");
-			var Holodeck_AI = DefDatabase<ThingDef>.GetNamed("Holodeck_AI");
-			
+			var HullFoamWall = GetDatabaseThing("HullFoamWall");
+			var Ship_Beam_Unpowered = GetDatabaseThing("Ship_Beam_Unpowered");
+			var Ship_Beam = GetDatabaseThing("Ship_Beam");
+			var Ship_BeamArchotech_Unpowered = GetDatabaseThing("Ship_BeamArchotech_Unpowered");
+			var Ship_BeamArchotech = GetDatabaseThing("Ship_BeamArchotech");
+			var ShipAirlock = GetDatabaseThing("ShipAirlock");
+			var ShipAirlockArchotech = GetDatabaseThing("ShipAirlockArchotech");
+
+			var ShipInside_PassiveCooler = GetDatabaseThing("ShipInside_PassiveCooler");
+			var ShipInside_PassiveCoolerAdvanced = GetDatabaseThing("ShipInside_PassiveCoolerAdvanced");
+			var ShipInside_PassiveCoolerArchotech = GetDatabaseThing("ShipInside_PassiveCoolerArchotech");
+
+			var ShipInside_PassiveVent = GetDatabaseThing("ShipInside_PassiveVent");
+			var ShipInside_PassiveVentArchotech = GetDatabaseThing("ShipInside_PassiveVentArchotech");
+
+			var ShipInside_SolarGenerator = GetDatabaseThing("ShipInside_SolarGenerator");
+			var ShipInside_SolarGeneratorArchotech = GetDatabaseThing("ShipInside_SolarGeneratorArchotech");
+
+			var Ship_Reactor = GetDatabaseThing("Ship_Reactor");
+			var ArchotechAntimatterReactor = GetDatabaseThing("ArchotechAntimatterReactor");
+
+			var ShipCombatShieldGenerator = GetDatabaseThing("ShipCombatShieldGenerator");
+			var ArchotechShieldGenerator = GetDatabaseThing("ArchotechShieldGenerator");
+
+			var ShipHeatsink = GetDatabaseThing("ShipHeatsink");
+			var ShipHeatManifold = GetDatabaseThing("ShipHeatManifold");
+			var ShipHeatsinkAntiEntropy = GetDatabaseThing("ShipHeatsinkAntiEntropy");
+
+			var Holodeck_Basic = GetDatabaseThing("Holodeck_Basic");
+			var Holodeck_Standard = GetDatabaseThing("Holodeck_Standard");
+			var Holodeck_AI = GetDatabaseThing("Holodeck_AI");
+
 			var walls = new List<ThingDef>()
 			{
 				HullFoamWall,
@@ -83,26 +80,6 @@ namespace Replace_Stuff_Compatibility
 				ShipInside_SolarGeneratorArchotech
 			};
 
-			var reactors = new List<ThingDef>()
-			{
-				Ship_Reactor,
-				ArchotechAntimatterReactor
-			};
-
-			var heatSinks = new List<ThingDef>()
-			{
-				ShipHeatsink,
-				ShipHeatManifold,
-				ShipHeatsinkAntiEntropy
-			};
-
-			var holodecks = new List<ThingDef>()
-			{
-				Holodeck_Basic,
-				Holodeck_Standard,
-				Holodeck_AI
-			};
-			
 			var wallsAndSimilar = walls
 				.Concat(vents)
 				.Concat(radiators)
@@ -133,30 +110,22 @@ namespace Replace_Stuff_Compatibility
 			));
 
 			// All Wall-Like items should be interchangeable
-			NewThingReplacement.replacements.Add(new NewThingReplacement.Replacement(
-				ListContainsThingDef(wallsAndSimilar)
-			));
+			AddInterchangeableList(wallsAndSimilar);
 
 			// The ship reactors are interchangeable
-			NewThingReplacement.replacements.Add(new NewThingReplacement.Replacement(
-				ListContainsThingDef(reactors)
-			));
+			AddInterchangeableList(Ship_Reactor, ArchotechAntimatterReactor);
 
 			// Can upgrade shields to archotech shields
 			NewThingReplacement.replacements.Add(new NewThingReplacement.Replacement(
 				newItem => newItem == ArchotechShieldGenerator,
 				oldItem => oldItem == ShipCombatShieldGenerator
 			));
-
+			
 			// The small heat sinks are interchangeable
-			NewThingReplacement.replacements.Add(new NewThingReplacement.Replacement(
-				ListContainsThingDef(heatSinks)
-			));
+			AddInterchangeableList(ShipHeatsink, ShipHeatManifold, ShipHeatsinkAntiEntropy);
 
 			// The holodecks are interchangeable
-			NewThingReplacement.replacements.Add(new NewThingReplacement.Replacement(
-				ListContainsThingDef(holodecks)
-			));
+			AddInterchangeableList(Holodeck_Basic, Holodeck_Standard, Holodeck_AI);
 		}
 	}
 }

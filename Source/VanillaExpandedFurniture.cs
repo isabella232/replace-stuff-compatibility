@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using Replace_Stuff.NewThing;
-using RimWorld;
+﻿using RimWorld;
 using Verse;
 
 namespace Replace_Stuff_Compatibility
 {
-	public static class VanillaExpandedFurniture
+	public class VanillaExpandedFurniture: AbstractPatch
 	{
 		[DefOf]
 		public static class BaseGameThingDefs
@@ -15,43 +12,21 @@ namespace Replace_Stuff_Compatibility
 			public static ThingDef Dresser;
 		}
 
-		private static Predicate<ThingDef> ListContainsThingDef(List<ThingDef> list)
-		{
-			return product => list.Exists(n => n == product);
-		}
+		protected override string GetRequiredModNames() => "vanillaexpanded.vfecore";
 
-		
-		public static void Patch()
+		protected override void AddItems()
 		{
 			if (!LoadedModManager.RunningModsListForReading.Exists(pack => pack.PackageId == "vanillaexpanded.vfecore"))
 			{
 				return;
 			}
-			
-			var tableLightEndTable = DefDatabase<ThingDef>.GetNamed("Table_LightEndTable");
-			var tableRoyalEndTable = DefDatabase<ThingDef>.GetNamed("Table_RoyalEndTable");
-			var tableRoyalDresser = DefDatabase<ThingDef>.GetNamed("Table_RoyalDresser");
 
-			var endTables = new List<ThingDef>()
-			{
-				BaseGameThingDefs.EndTable,
-				tableLightEndTable,
-				tableRoyalEndTable
-			};
+			var tableLightEndTable = GetDatabaseThing("Table_LightEndTable");
+			var tableRoyalEndTable = GetDatabaseThing("Table_RoyalEndTable");
+			var tableRoyalDresser = GetDatabaseThing("Table_RoyalDresser");
 
-			var dressers = new List<ThingDef>()
-			{
-				BaseGameThingDefs.Dresser,
-				tableRoyalDresser,
-			};
-
-			NewThingReplacement.replacements.Add(new NewThingReplacement.Replacement(
-				ListContainsThingDef(endTables)
-			));
-			
-			NewThingReplacement.replacements.Add(new NewThingReplacement.Replacement(
-				ListContainsThingDef(dressers)
-			));
+			AddInterchangeableList(BaseGameThingDefs.EndTable, tableLightEndTable, tableRoyalEndTable);
+			AddInterchangeableList(BaseGameThingDefs.Dresser, tableRoyalDresser);
 		}
 	}
 }

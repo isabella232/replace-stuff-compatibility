@@ -11,9 +11,12 @@
 	<packageId>Garethp.ReplaceStuffCompatibility</packageId>
 	<description>A patch for Replace Stuff to introduce compatibility for various mods. Replace ship walls and reactors without having to remove them first
 
-	Mods included in this patch so far are:
-		* Save Our Ship 2 
-		* Vanilla Expanded Furniture</description>
+Mods included in this patch so far are:
+ * Save Our Ship 2
+ * Vanilla Furniture Expanded (Core)
+ * Vanilla Furniture Expanded - Security
+ * Vanilla Furniture Expanded - Power
+	</description>
 	<modDependencies>
 		<li>
 			<packageId>brrainz.harmony</packageId>

@@ -7,11 +7,6 @@
  * Ship capacitors
  * Weapons
 
-### Vanilla Extended Security
- * The different turrets
- * Autocannons / Slug Turrets
- * Barricade / Barrier
-
 ### Mechanised Armor Racks
  * All
 
