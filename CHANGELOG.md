@@ -1,5 +1,13 @@
 ## Changelog
 
+### Version 1.4
+ - Armour Racks
+   - Replace all types of Armour Racks without losing contents, settings or owner
+ - LWM Deep Storage
+   - Shelf/Double Shelf/Tall Shelves
+   - Palle/Pallet with Wrapping
+   - Weapon Cabinet/Weapon Locker
+
 ### Version 1.3
  - Core Game
    - TVs

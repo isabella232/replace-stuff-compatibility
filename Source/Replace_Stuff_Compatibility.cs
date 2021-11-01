@@ -29,7 +29,9 @@ namespace Replace_Stuff_Compatibility
 					new VanillaExpandedSecurity(), 
 					new VanillaExpandedPower(),
 					new VanillaFurnitureProduction(),
-					new VanillaExpandedSpacer()
+					new VanillaExpandedSpacer(),
+					new ArmourRacks(),
+					new LWMDeepStorage()
 				};
 
 				patches.ForEach(patch => patch.Patch());

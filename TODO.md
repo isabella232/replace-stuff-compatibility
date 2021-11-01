@@ -7,10 +7,6 @@
  * Ship capacitors
  * Weapons
 
-### Mechanised Armor Racks
- * All
-
 ### Deep Storage
- * Shelves / Tall Shelves
  * Shelves / Repair Shelves
  * Refridgerator / Deep Refridgerator
