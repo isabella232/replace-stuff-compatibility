@@ -28,6 +28,9 @@
 			var watermillGenerator = GetDatabaseThing("WatermillGenerator");
 			var largeWatermillGenerator = GetDatabaseThing("VFE_AdvancedWatermillGenerator");
 
+			var geothermalGenerator = GetDatabaseThing("GeothermalGenerator");
+			var advancedGeothermalGenerator = GetDatabaseThing("VPE_AdvancedGeothermalGenerator");
+			
 			var electricCrematorium = GetDatabaseThing("ElectricCrematorium");
 			var helexienCrematorium = GetDatabaseThing("VPE_GasCrematorium");
 			
@@ -55,6 +58,7 @@
 			AddInterchangeableList(electricCrematorium, helexienCrematorium);
 			AddInterchangeableList(fueledStove, electricStove, helixienStove);
 			AddInterchangeableList(biofuelRefinery, helixienRefinery);
+			AddInterchangeableList(geothermalGenerator, advancedGeothermalGenerator);
 		}
 	}
 }

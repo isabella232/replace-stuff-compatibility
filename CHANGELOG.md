@@ -1,5 +1,12 @@
 ## Changelog
 
+### Version 1.4.1
+ - Vanilla Furniture Expanded - Power
+   - Geothermal Generator/Advanced Geothermal Generator
+ - Armour Rack
+   - Fixed pawns throwing clothes on the ground
+   - Fixed an error if trying to replace a rack with no owner
+
 ### Version 1.4
  - Armour Racks
    - Replace all types of Armour Racks without losing contents, settings or owner

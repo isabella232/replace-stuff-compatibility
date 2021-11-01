@@ -19,8 +19,9 @@ namespace Replace_Stuff_Compatibility
 		public void Patch()
 		{
 			var requiredModName = GetRequiredModNames();
-			
-			if (requiredModName != "" && !LoadedModManager.RunningModsListForReading.Exists(pack => pack.PackageId == requiredModName))
+
+			if (requiredModName != "" &&
+			    !LoadedModManager.RunningModsListForReading.Exists(pack => pack.PackageId == requiredModName))
 			{
 				return;
 			}
@@ -28,36 +29,40 @@ namespace Replace_Stuff_Compatibility
 			AddItems();
 		}
 
+		private static Action<Thing, Thing> transferBills = (n, o) =>
+		{
+			Building_WorkTable newTable = n as Building_WorkTable;
+			Building_WorkTable oldTable = o as Building_WorkTable;
+
+			foreach (Bill bill in oldTable.BillStack)
+			{
+				newTable.BillStack.AddBill(bill);
+			}
+		};
+
 		protected static ThingDef GetDatabaseThing(string name) => DefDatabase<ThingDef>.GetNamed(name);
 
 		protected static Predicate<ThingDef> ListContainsThingDef(List<ThingDef> list)
 		{
 			return product => list.Exists(n => n == product);
 		}
-		
-		protected static void AddInterchangeableList(List<ThingDef> items)
-		{
-			NewThingReplacement.replacements.Add(new NewThingReplacement.Replacement(ListContainsThingDef(items)));
-		}
-		
-		protected static void AddInterchangeableList(params ThingDef[] items) => AddInterchangeableList(items.ToList());
-		
-		protected static void AddInterchangeableWorkbenches(List<ThingDef> items)
-		{
-			Action<Thing, Thing> transferBills = (n, o) =>
-			{
-				Building_WorkTable newTable = n as Building_WorkTable;
-				Building_WorkTable oldTable = o as Building_WorkTable;
 
-				foreach (Bill bill in oldTable.BillStack)
-				{
-					newTable.BillStack.AddBill(bill);
-				}
-			};
+		protected static void AddInterchangeableList(List<ThingDef> items) => AddInterchangeableList(items, null, null);
 
-			NewThingReplacement.replacements.Add(new NewThingReplacement.Replacement(ListContainsThingDef(items), preAction: transferBills));
-		}
+		protected static void AddInterchangeableList(params ThingDef[] items) =>
+			AddInterchangeableList(items.ToList(), null, null);
 		
-		protected static void AddInterchangeableWorkbenches(params ThingDef[] items) => AddInterchangeableWorkbenches(items.ToList());
+		protected static void AddInterchangeableList(List<ThingDef> items, Action<Thing, Thing> preAction = null,
+			Action<Thing, Thing> postAction = null)
+		{
+			NewThingReplacement.replacements.Add(new NewThingReplacement.Replacement(ListContainsThingDef(items),
+				preAction: preAction, postAction: postAction));
+		}
+
+		protected static void AddInterchangeableWorkbenches(List<ThingDef> items) =>
+			AddInterchangeableList(items, preAction: transferBills);
+		
+		protected static void AddInterchangeableWorkbenches(params ThingDef[] items) =>
+			AddInterchangeableWorkbenches(items.ToList());
 	}
 }

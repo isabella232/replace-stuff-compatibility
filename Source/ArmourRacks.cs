@@ -18,19 +18,23 @@ namespace Replace_Stuff_Compatibility
 			var mendingArmourRack = GetDatabaseThing("ArmorRacks_MendingArmorRack");
 
 			// When replacing an armour rack, make sure to copy over it's settings, pawn type, body type and owner
-			NewThingReplacement.replacements.Add(new NewThingReplacement.Replacement(
-				ListContainsThingDef(new List<ThingDef>() {armourRack, mechanisedArmourRack, mendingArmourRack}),
+			AddInterchangeableList(new List<ThingDef>() {armourRack, mechanisedArmourRack, mendingArmourRack},
 				preAction: (newThing, oldThing) =>
 				{
 					var newRack = (ArmorRack) newThing;
 					var oldRack = (ArmorRack) oldThing;
 					
-					newRack.Settings.CopyFrom(oldRack.Settings);
-					newRack.BodyTypeDef = oldRack.BodyTypeDef;
-					newRack.PawnKindDef = oldRack.PawnKindDef;
+					newRack.Settings.CopyFrom(oldRack.GetStoreSettings());
+					if (newRack.PawnKindDef != oldRack.PawnKindDef)
+						newRack.PawnKindDef = oldRack.PawnKindDef;
+					else
+						newRack.BodyTypeDef = oldRack.BodyTypeDef;
 					
-					newRack.TryGetComp<CompAssignableToPawn_ArmorRacks>().TryAssignPawn(oldRack.GetAssignedPawn());
-				}));
+					oldRack.InnerContainer.TryTransferAllToContainer(newRack.InnerContainer);
+					
+					if (oldRack.GetAssignedPawn() != null)
+						newRack.TryGetComp<CompAssignableToPawn_ArmorRacks>().TryAssignPawn(oldRack.GetAssignedPawn());
+				});
 		}
 	}
 }
