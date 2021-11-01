@@ -31,7 +31,8 @@ namespace Replace_Stuff_Compatibility
 					new VanillaFurnitureProduction(),
 					new VanillaExpandedSpacer(),
 					new ArmourRacks(),
-					new LWMDeepStorage()
+					new LWMDeepStorage(),
+					new HigherPower()
 				};
 
 				patches.ForEach(patch => patch.Patch());

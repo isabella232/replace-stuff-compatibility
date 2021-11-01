@@ -1,5 +1,9 @@
 ## Changelog
 
+### Version 1.5
+ - Higher Power
+   - Various Lv2 Generators
+
 ### Version 1.4.1
  - Vanilla Furniture Expanded - Power
    - Geothermal Generator/Advanced Geothermal Generator

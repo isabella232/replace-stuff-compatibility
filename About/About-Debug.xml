@@ -67,6 +67,11 @@ Mods included in this patch so far are:
 [list]
 		[*] Keep your settings and storage while you replace Shelf/Double Shelf/Tall Shelves, Pallet/Pallet With Wrapping and Weapon Cabinet/Weapon Locker
 [/list]
+		
+[b][u][url=https://steamcommunity.com/sharedfiles/filedetails/?id=1409449372]Higher Power[/url][/u][/b]
+[list]
+	[*] More levels of powere generation to not have to worry about putting holes in your grid while replacing
+[/list]
 
 (This is the dev version of Replace Stuff. The release version of About.xml is available for editing at About/About-Release.xml. Edits made on this file or on the temporary About/About.xml won't show up on the release version. Use VisualStudio to build a "Release" version of this mod when ready to upload your mod!)</description>
 	<modDependencies>

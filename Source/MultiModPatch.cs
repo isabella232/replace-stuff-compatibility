@@ -22,6 +22,17 @@ namespace Replace_Stuff_Compatibility
 
 		public static List<ThingDef> Dressers = new List<ThingDef>() {GetDatabaseThing("Dresser")};
 
+		public static List<ThingDef> PoweredGenerators = new List<ThingDef>()
+			{GetDatabaseThing("WoodFiredGenerator"), GetDatabaseThing("ChemfuelPoweredGenerator")};
+
+		public static List<ThingDef> SolarGenerators = new List<ThingDef>() {GetDatabaseThing("SolarGenerator")};
+
+		public static List<ThingDef> GeothermalGenerators = new List<ThingDef>() {GetDatabaseThing("GeothermalGenerator")};
+
+		public static List<ThingDef> WindTurbines = new List<ThingDef>() {GetDatabaseThing("WindTurbine")};
+
+		public static List<ThingDef> WatermillGenerators = new List<ThingDef>() {GetDatabaseThing("WatermillGenerator")};
+		
 		public static List<ThingDef> TVs = new List<ThingDef>()
 		{
 			GetDatabaseThing("TubeTelevision"), GetDatabaseThing("FlatscreenTelevision"),
@@ -38,6 +49,9 @@ namespace Replace_Stuff_Compatibility
 					((IPlantToGrowSettable) newItem).SetPlantDefToGrow(((IPlantToGrowSettable) oldItem).GetPlantDefToGrow());
 				}));
 
+			NewThingReplacement.replacements.Add(new NewThingReplacement.Replacement(
+				building => typeof(Building_Battery).IsAssignableFrom(building.thingClass)));
+
 			AddInterchangeableWorkbenches(Smelters);
 			AddInterchangeableWorkbenches(Smithys);
 			AddInterchangeableList(Lights);
@@ -45,6 +59,11 @@ namespace Replace_Stuff_Compatibility
 			AddInterchangeableList(EndTables);
 			AddInterchangeableList(Dressers);
 			AddInterchangeableList(TVs);
+			AddInterchangeableList(PoweredGenerators);
+			AddInterchangeableList(SolarGenerators);
+			AddInterchangeableList(GeothermalGenerators);
+			AddInterchangeableList(WindTurbines);
+			AddInterchangeableList(WatermillGenerators);
 		}
 	}
 }
