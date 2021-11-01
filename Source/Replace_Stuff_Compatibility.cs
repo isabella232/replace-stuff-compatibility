@@ -30,6 +30,7 @@ namespace Replace_Stuff_Compatibility
 					new VanillaExpandedPower(),
 					new VanillaFurnitureProduction(),
 					new VanillaExpandedSpacer(),
+					new VanillaExpandedBooks(),
 					new ArmourRacks(),
 					new LWMDeepStorage(),
 					new HigherPower()

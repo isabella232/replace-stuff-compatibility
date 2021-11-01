@@ -1,5 +1,9 @@
 ## Changelog
 
+### Version 1.6
+ - Vanilla Books Expanded
+   - Writers Table/Typewriters Table
+
 ### Version 1.5.1
  - Core
    - No longer bundle a local copy of ArmorRack
