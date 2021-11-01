@@ -1,5 +1,9 @@
 ## Changelog
 
+### Version 1.5.1
+ - Core
+   - No longer bundle a local copy of ArmorRack
+
 ### Version 1.5
  - Higher Power
    - Various Lv2 Generators
