@@ -1,5 +1,11 @@
 ## Changelog
 
+### Version 1.7
+ - Core
+   - Allow bridges from all mods to replace each other
+ - Simple Utilities: Wall
+   - Fixes bug where having this and Replace Stuff together breaks over-wall coolers
+
 ### Version 1.6
  - Vanilla Books Expanded
    - Writers Table/Typewriters Table

@@ -17,7 +17,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Defs" />
-    <Folder Include="Patches" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="About\PublishedFileId.txt" />

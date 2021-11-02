@@ -58,6 +58,11 @@ Mods included in this patch so far are:
 	[*] New Gas Powered Sunlamp with the Great Replaceable Taste
 [/list]
 		
+[b][u][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2608762624]Vanilla Furniture Expanded - Architect[/url][/u][/b]
+[list]
+	[*] Allow bridges to be upgraded. Heck, let's not even restrict it to this mod, all bridges from all mods should be interchangable
+[/list]
+		
 [b][u][url=https://steamcommunity.com/workshop/filedetails/?id=1875828205]Armour Racks[/url][/u][/b]
 [list] 
 	[*] Why should your colonist forget which rack belongs to them just because it got a small upgrade? Luther, get your damn suit on already!
@@ -76,6 +81,11 @@ Mods included in this patch so far are:
 [b][u][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2193152410]Vanilla Books Expanded[/url][/u][/b]
 [list]
 	[*] You've invented writing! So your pawns may as well write down the bills they need to do when upgrading to the typewriters table so they don't forget
+[/list]
+
+[b][u][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2565545335]Simple Utilities: Wall[/url][/u][/b]
+[list]
+	[*] Having both Simple Utilties: Wall and Replace Stuff used to break the ability to replace a wall underneath the Over-Wall cooler, but since I'm so nice I decided to fix this for you
 [/list]
 	</description>
 	<modDependencies>
@@ -97,5 +107,6 @@ Mods included in this patch so far are:
 		<li>kentington.saveourship2</li>
 		<li>vanillaexpanded.vfecore</li>
 		<li>khamenman.armorracks</li>
+		<li>Owlchemist.WallUtilities</li>
 	</loadAfter>
 </ModMetaData>
