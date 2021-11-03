@@ -39,6 +39,10 @@ namespace Replace_Stuff_Compatibility
 			GetDatabaseThing("MegascreenTelevision")
 		};
 
+		public static List<ThingDef> Fabricators = new List<ThingDef>() { GetDatabaseThing("FabricationBench") };
+
+		public static List<ThingDef> Wardrobes = new List<ThingDef>() { };
+		
 		protected override void AddItems()
 		{
 			// Allow all "plant growable items" to replace each other, and when they do attempt to set the growing plant type
@@ -64,6 +68,8 @@ namespace Replace_Stuff_Compatibility
 			AddInterchangeableList(GeothermalGenerators);
 			AddInterchangeableList(WindTurbines);
 			AddInterchangeableList(WatermillGenerators);
+			AddInterchangeableList(Fabricators);
+			AddInterchangeableList(Wardrobes);
 		}
 	}
 }

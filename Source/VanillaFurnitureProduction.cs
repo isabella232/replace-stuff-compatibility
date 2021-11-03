@@ -8,10 +8,7 @@
 		{
 			var stoneCutter = GetDatabaseThing("TableStonecutter");
 			var electricStoneCutter = GetDatabaseThing("VFE_TableStonecutterElectric");
-
-			var fabricationBench = GetDatabaseThing("FabricationBench");
-			var assemblyBench = GetDatabaseThing("VFE_ComponentFabricationBench");
-
+			
 			var butchersTable = GetDatabaseThing("TableButcher");
 			var electricButchersTable = GetDatabaseThing("VFE_TableButcherElectric");
 
@@ -19,9 +16,9 @@
 			var electricDrugLab = GetDatabaseThing("VFE_TableDrugLabElectric");
 			
 			MultiModPatch.Smelters.Add(GetDatabaseThing("VFE_FueledSmelter"));
+			MultiModPatch.Fabricators.Add(GetDatabaseThing("VFE_ComponentFabricationBench"));
 
 			AddInterchangeableWorkbenches(stoneCutter, electricStoneCutter);
-			AddInterchangeableWorkbenches(fabricationBench, assemblyBench);
 			AddInterchangeableWorkbenches(butchersTable, electricButchersTable);
 			AddInterchangeableWorkbenches(drugLab, electricDrugLab);
 		}

@@ -23,6 +23,7 @@ Mods included in this patch so far are:
 [b][u][url=https://steamcommunity.com/workshop/filedetails/?id=1718190143]Vanilla Furniture Expanded (Core)[/url][/u][/b]
 [list]
 	[*] You can now replace Campfires, Radios, End Tables, Dressers and the new Lamps
+	[*] Vanilla Furniture Expanded items that attach to walls should no longer be removed when replacing walls
 [/list]
 
 [b][u][url=https://steamcommunity.com/workshop/filedetails/?id=1845154007]Vanilla Furniture Expanded (Security)[/url][/u][/b]
@@ -86,6 +87,18 @@ Mods included in this patch so far are:
 [b][u][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2565545335]Simple Utilities: Wall[/url][/u][/b]
 [list]
 	[*] Having both Simple Utilties: Wall and Replace Stuff used to break the ability to replace a wall underneath the Over-Wall cooler, but since I'm so nice I decided to fix this for you
+[/list]
+		
+[b][u][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2479560240]Rim Effect[/url][/u][/b]
+[list]
+	[*] More Dressers? More Endtables? And now a wardrobe?
+	[*] More power generation
+	[*] A fabrication bench to upgrade to
+[/list]
+		
+[b][u][url=https://steamcommunity.com/sharedfiles/filedetails/?id=1423699208]Wall Light[/url][/u][/b]
+[list]
+	[*] You can replace the wall under the light without breaking the light
 [/list]
 	</description>
 	<modDependencies>

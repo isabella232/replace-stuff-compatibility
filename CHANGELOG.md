@@ -1,5 +1,15 @@
 ## Changelog
 
+### Version 1.8
+ - Vanilla Furniture Expanded
+   - All AttachedToWall items should now not detach when the wall is replaced
+ - Rim Effect
+   - Furniture
+   - Power Generation
+   - Lights
+ - Wall Light
+   - No longer detach when wall is replaced
+
 ### Version 1.7
  - Core
    - Allow bridges from all mods to replace each other

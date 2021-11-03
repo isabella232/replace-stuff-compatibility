@@ -31,6 +31,7 @@ namespace Replace_Stuff_Compatibility
 					new VanillaFurnitureProduction(),
 					new VanillaExpandedSpacer(),
 					new VanillaExpandedBooks(),
+					new RimEffect(),
 					new ArmourRacks(),
 					new LWMDeepStorage(),
 					new HigherPower()
