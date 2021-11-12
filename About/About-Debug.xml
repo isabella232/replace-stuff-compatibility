@@ -9,7 +9,7 @@
 		<li>1.3</li>
 	</supportedVersions>
 	<packageId>GarethpDebug.ReplaceStuffCompatibility</packageId>
-	<description>A patch for Replace Stuff to introduce compatibility for various mods. Replace ship walls and reactors without having to remove them first
+	<description>A patch for Replace Stuff to introduce compatibility for various mods. Replace ship walls and reactors without having to remove them first. Source code found on [url=https://github.com/Garethp/replace-stuff-compatibility]Github[/url]
 
 Mods included in this patch so far are:
 [b][u][url=https://steamcommunity.com/workshop/filedetails/?id=1909914131]Save Our Ship 2[/url][/u][/b]
