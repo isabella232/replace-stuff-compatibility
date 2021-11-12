@@ -1,5 +1,24 @@
 ## Changelog
 
+### Version 1.9
+ - Core
+   - All Geothermal/Windmill/Watermill Generators from all mods should now work, rather than on a mod by mod basis
+   - Removed Bridges since that didn't work
+ - Jewelry
+   - Art Table / Laser Sculptors Bench
+ - Utility Columns
+   - All columns
+   - Light / Dark Columns and other Lights
+   - Sun Column / Sun lamps
+ - Dub's Bad Hygiene
+   - Basin / Fountain
+   - Latrine / Toilets
+   - Bathtubs and Showers
+   - Water Containers
+   - Septic Tank / Sewage Treatment
+ - Vanilla Furniture Expanded - Production
+   - Adding in Large Production Tables
+
 ### Version 1.8
  - Vanilla Furniture Expanded
    - All AttachedToWall items should now not detach when the wall is replaced

@@ -11,7 +11,6 @@
 			
 			MultiModPatch.SolarGenerators.Add(GetDatabaseThing("PrefabSolarCollectors"));
 			MultiModPatch.PoweredGenerators.Add(GetDatabaseThing("RE_PrefabGenerator"));
-			MultiModPatch.GeothermalGenerators.Add(GetDatabaseThing("RE_PrefabGeothermalPlant"));
 			
 			MultiModPatch.EndTables.Add(GetDatabaseThing("RE_PrefabEndTable"));
 			MultiModPatch.EndTables.Add(GetDatabaseThing("RE_PrefabEndTableWithLamp"));
@@ -21,6 +20,8 @@
 			MultiModPatch.TVs.Add(GetDatabaseThing("RE_PrefabTelevision"));
 			
 			MultiModPatch.Lights.Add(GetDatabaseThing("RE_PrefabStandingLamp"));
+			
+			MultiModPatch.Columns.Add(GetDatabaseThing("RE_PrefabColumn"));
 			
 			AddInterchangeableList(bedsideTable, bedsideTableWithLamp);
 		}

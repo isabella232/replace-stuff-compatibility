@@ -17,7 +17,7 @@ namespace Replace_Stuff_Compatibility.Comps
 			    || mode == DestroyMode.FailConstruction 
 			    || mode == DestroyMode.Cancel
 			) return;
-
+	
 			foreach (var t in __instance.Position.GetThingList(__instance.Map).Where(b => b != __instance).ToList())
 			{
 				var mountableComp = t.TryGetComp<CompMountableOnWall>();
@@ -44,7 +44,7 @@ namespace Replace_Stuff_Compatibility.Comps
 							? constructible.def.blueprintDef
 							: constructible.def.entityDefToBuild.blueprintDef));
 					ThingDef thingDef2 = thingDef.entityDefToBuild as ThingDef;
-
+	
 					if (thingDef2?.building != null && thingDef2.building.canPlaceOverWall &&
 					    thingDef2.HasComp(typeof(CompMountableOnWall)) &&
 					    (t.def.IsSmoothed || t.def.defName.ToLower().Contains("wall")))

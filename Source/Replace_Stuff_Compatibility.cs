@@ -34,7 +34,11 @@ namespace Replace_Stuff_Compatibility
 					new RimEffect(),
 					new ArmourRacks(),
 					new LWMDeepStorage(),
-					new HigherPower()
+					new HigherPower(),
+					new Jewelry(),
+					new BadHygiene(),
+					new BadHygieneLite(),
+					new UtilityColumns()
 				};
 
 				patches.ForEach(patch => patch.Patch());

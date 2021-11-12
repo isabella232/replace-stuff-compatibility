@@ -17,7 +17,11 @@
 			
 			MultiModPatch.Smelters.Add(GetDatabaseThing("VFE_FueledSmelter"));
 			MultiModPatch.Fabricators.Add(GetDatabaseThing("VFE_ComponentFabricationBench"));
-
+			MultiModPatch.MachiningTables.Add(GetDatabaseThing("VFE_TableMachiningLarge"));
+			MultiModPatch.Smithys.Add(GetDatabaseThing("VFE_TableSmithyLarge"));
+			MultiModPatch.Stoves.Add(GetDatabaseThing("VFE_TableStoveLarge"));
+			MultiModPatch.TailoringBenches.Add(GetDatabaseThing("VFE_TableTailorLarge"));
+			
 			AddInterchangeableWorkbenches(stoneCutter, electricStoneCutter);
 			AddInterchangeableWorkbenches(butchersTable, electricButchersTable);
 			AddInterchangeableWorkbenches(drugLab, electricDrugLab);
