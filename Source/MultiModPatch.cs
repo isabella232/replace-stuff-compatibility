@@ -74,8 +74,6 @@ namespace Replace_Stuff_Compatibility
 				building => building.placeWorkers?.Any(placeWorker =>
 					placeWorker == typeof(PlaceWorker_OnSteamGeyser)) ?? false));
 
-			AddInterchangeableWorkbenches(Smelters);
-			AddInterchangeableWorkbenches(Smithys);
 			AddInterchangeableList(Lights);
 			AddInterchangeableList(Sunlamps);
 			AddInterchangeableList(EndTables);
@@ -83,13 +81,16 @@ namespace Replace_Stuff_Compatibility
 			AddInterchangeableList(TVs);
 			AddInterchangeableList(PoweredGenerators);
 			AddInterchangeableList(SolarGenerators);
-			AddInterchangeableList(Fabricators);
 			AddInterchangeableList(Wardrobes);
-			AddInterchangeableList(TailoringBenches);
-			AddInterchangeableList(Stoves);
-			AddInterchangeableList(MachiningTables);
-			AddInterchangeableList(ArtTables);
 			AddInterchangeableList(Columns);
+
+			AddInterchangeableWorkbenches(Smelters);
+			AddInterchangeableWorkbenches(Smithys);
+			AddInterchangeableWorkbenches(Fabricators);
+			AddInterchangeableWorkbenches(TailoringBenches);
+			AddInterchangeableWorkbenches(Stoves);
+			AddInterchangeableWorkbenches(MachiningTables);
+			AddInterchangeableWorkbenches(ArtTables);
 		}
 	}
 }

@@ -1,5 +1,10 @@
 ## Changelog
 
+### Version 1.10
+ - Core
+   - Swap out CanReplace check for better performance
+   - Re-add bill transfers for workbenches
+
 ### Version 1.9
  - Core
    - All Geothermal/Windmill/Watermill Generators from all mods should now work, rather than on a mod by mod basis

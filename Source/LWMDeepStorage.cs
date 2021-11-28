@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using ArmorRacks.ThingComps;
-using ArmorRacks.Things;
-using Replace_Stuff.NewThing;
 using RimWorld;
 using Verse;
 
@@ -30,17 +27,9 @@ namespace Replace_Stuff_Compatibility
 				((Building_Storage) newThing).settings.CopyFrom(((Building_Storage) oldThing).settings);
 			};
 
-			NewThingReplacement.replacements.Add(new NewThingReplacement.Replacement(
-				ListContainsThingDef(new List<ThingDef>() {shelf, doubleShelf, deepDoubleShelf}),
-				preAction: copyStorageSettings));
-
-			NewThingReplacement.replacements.Add(new NewThingReplacement.Replacement(
-				ListContainsThingDef(new List<ThingDef>() {pallet, wrappedPallet}),
-				preAction: copyStorageSettings));
-			
-			NewThingReplacement.replacements.Add(new NewThingReplacement.Replacement(
-				ListContainsThingDef(new List<ThingDef>() {weaponsCabinet, weaponsLocker}),
-				preAction: copyStorageSettings));
+			AddInterchangeableList(new List<ThingDef> {shelf, doubleShelf, deepDoubleShelf}, preAction: copyStorageSettings);
+			AddInterchangeableList(new List<ThingDef> {pallet, wrappedPallet}, preAction: copyStorageSettings);
+			AddInterchangeableList(new List<ThingDef> {weaponsCabinet, weaponsLocker}, preAction: copyStorageSettings);
 		}
 	}
 }
