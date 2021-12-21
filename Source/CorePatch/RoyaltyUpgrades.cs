@@ -1,4 +1,4 @@
-﻿namespace Replace_Stuff_Compatibility
+﻿namespace Replace_Stuff_Compatibility.CorePatch
 {
 	public class RoyaltyUpgrades: AbstractPatch
 	{

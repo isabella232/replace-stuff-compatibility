@@ -1,8 +1,4 @@
-﻿using System.Collections.Generic;
-using Replace_Stuff.NewThing;
-using Verse;
-
-namespace Replace_Stuff_Compatibility
+﻿namespace Replace_Stuff_Compatibility.ModPatch
 {
 	public class VanillaExpandedSecurity : AbstractPatch
 	{

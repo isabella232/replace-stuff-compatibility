@@ -1,5 +1,9 @@
 ## Changelog
 
+### Version 1.11
+ - Subsurface Conduit / Underground Power Conduits
+   - Replace regular conduits with these
+
 ### Version 1.10
  - Core
    - Swap out CanReplace check for better performance

@@ -49,6 +49,8 @@ namespace Replace_Stuff_Compatibility
 
 		public static List<ThingDef> Columns = new List<ThingDef>() { GetDatabaseThing("Column") };
 
+		public static List<ThingDef> PowerConduits = new List<ThingDef>(){ GetDatabaseThing("PowerConduit"), GetDatabaseThing("WaterproofConduit") };
+
 		protected override void AddItems()
 		{
 			// Allow all "plant growable items" to replace each other, and when they do attempt to set the growing plant type
@@ -91,6 +93,8 @@ namespace Replace_Stuff_Compatibility
 			AddInterchangeableWorkbenches(Stoves);
 			AddInterchangeableWorkbenches(MachiningTables);
 			AddInterchangeableWorkbenches(ArtTables);
+			
+			AddInterchangeableList(PowerConduits);
 		}
 	}
 }

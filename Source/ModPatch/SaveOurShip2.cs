@@ -1,11 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using Replace_Stuff.NewThing;
 using RimWorld;
 using Verse;
 
-namespace Replace_Stuff_Compatibility
+namespace Replace_Stuff_Compatibility.ModPatch
 {
 	public class SaveOurShip2 : AbstractPatch
 	{

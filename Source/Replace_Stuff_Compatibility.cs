@@ -1,5 +1,7 @@
 ﻿using System.Collections.Generic;
 using HarmonyLib;
+using Replace_Stuff_Compatibility.CorePatch;
+using Replace_Stuff_Compatibility.ModPatch;
 using Verse;
 
 namespace Replace_Stuff_Compatibility
@@ -24,7 +26,7 @@ namespace Replace_Stuff_Compatibility
 					new CoreUpgrades(),
 					new RoyaltyUpgrades(),
 					new IdeologyUpgrades(),
-					new SaveOurShip2(),
+					new ModPatch.SaveOurShip2(),
 					new VanillaExpandedFurniture(),
 					new VanillaExpandedSecurity(), 
 					new VanillaExpandedPower(),
@@ -38,7 +40,9 @@ namespace Replace_Stuff_Compatibility
 					new Jewelry(),
 					new BadHygiene(),
 					new BadHygieneLite(),
-					new UtilityColumns()
+					new UtilityColumns(),
+					new SubsurfaceConduits(),
+					new UndergroundPowerConduit()
 				};
 
 				patches.ForEach(patch => patch.Patch());

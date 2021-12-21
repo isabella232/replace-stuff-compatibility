@@ -117,6 +117,11 @@ Mods included in this patch so far are:
 	[*] Dubs Bad Hygiene Lite is also supported
 [/list]
 		
+[b][u][url=https://steamcommunity.com/sharedfiles/filedetails/?id=1609226728]Subsurface Conduit[/url] / [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1735421319]Undergroup Power Conduits[/url][/u][/b]
+[list]
+	[*] Replace your power conduits with underground conduits from any of these mods without having to disconnect the entire line
+[/list]
+		
 (This is the dev version of Replace Stuff. The release version of About.xml is available for editing at About/About-Release.xml. Edits made on this file or on the temporary About/About.xml won't show up on the release version. Use VisualStudio to build a "Release" version of this mod when ready to upload your mod!)</description>
 	<modDependencies>
 		<li>

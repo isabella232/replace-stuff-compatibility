@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using RimWorld;
 using Verse;
 
-namespace Replace_Stuff_Compatibility
+namespace Replace_Stuff_Compatibility.ModPatch
 {
 	public class LWMDeepStorage : AbstractPatch
 	{
