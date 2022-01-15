@@ -122,6 +122,11 @@ Mods included in this patch so far are:
 	[*] Replace your power conduits with underground conduits from any of these mods without having to disconnect the entire line
 [/list]
 		
+[b][u][url=https://steamcommunity.com/sharedfiles/filedetails/?id=1558161673]Rimbees[/url][/u][/b]
+[list]
+	[*] Just bee happy that when you want to upgrade your beehouses you don't also have to be a busy bee re-injecting all those bee's back into their new shiny houses
+[/list]
+		
 (This is the dev version of Replace Stuff. The release version of About.xml is available for editing at About/About-Release.xml. Edits made on this file or on the temporary About/About.xml won't show up on the release version. Use VisualStudio to build a "Release" version of this mod when ready to upload your mod!)</description>
 	<modDependencies>
 		<li>

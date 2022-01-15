@@ -42,7 +42,8 @@ namespace Replace_Stuff_Compatibility
 					new BadHygieneLite(),
 					new UtilityColumns(),
 					new SubsurfaceConduits(),
-					new UndergroundPowerConduit()
+					new UndergroundPowerConduit(),
+					new RimBeesPatch()
 				};
 
 				patches.ForEach(patch => patch.Patch());

@@ -1,5 +1,8 @@
 ## Changelog
 
+### Version 1.12
+ - Rimbee beehouse replacement
+
 ### Version 1.11
  - Subsurface Conduit / Underground Power Conduits
    - Replace regular conduits with these
