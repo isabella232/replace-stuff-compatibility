@@ -16,9 +16,6 @@
 		<AboutFiles Include="About\About-Debug.xml;About\About-Release.xml" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Defs" />
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="About\PublishedFileId.txt" />
     <Content Include="CHANGELOG.md" />
     <Content Include="PublishedFileId.txt" />

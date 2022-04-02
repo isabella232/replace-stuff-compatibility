@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using Replace_Stuff;
 using Replace_Stuff.NewThing;
 using RimWorld;
 using Verse;
@@ -19,6 +20,14 @@ namespace Replace_Stuff_Compatibility.ModPatch
 			var Ship_BeamArchotech = GetDatabaseThing("Ship_BeamArchotech");
 			var ShipAirlock = GetDatabaseThing("ShipAirlock");
 			var ShipAirlockArchotech = GetDatabaseThing("ShipAirlockArchotech");
+			var WreckedHull = GetDatabaseThing("Ship_Beam_Wrecked");
+			var WrechedHullFake = GetDatabaseThing("Ship_Beam_Wrecked_Fake");
+			var SmallCornerHull = GetDatabaseThing("Ship_Corner_OneOne");
+			var SmallCornerHullFlipped = GetDatabaseThing("Ship_Corner_OneOneFlip");
+			var MediumCornerHull = GetDatabaseThing("Ship_Corner_OneTwo");
+			var MediumCornerHullFlipped = GetDatabaseThing("Ship_Corner_OneTwoFlip");
+			var LargeCornerHull = GetDatabaseThing("Ship_Corner_OneThree");
+			var LargeCornerHullFlipped = GetDatabaseThing("Ship_Corner_OneThreeFlip");
 
 			var ShipInside_PassiveCooler = GetDatabaseThing("ShipInside_PassiveCooler");
 			var ShipInside_PassiveCoolerAdvanced = GetDatabaseThing("ShipInside_PassiveCoolerAdvanced");
@@ -52,7 +61,15 @@ namespace Replace_Stuff_Compatibility.ModPatch
 				Ship_BeamArchotech_Unpowered,
 				Ship_BeamArchotech,
 				ShipAirlock,
-				ShipAirlockArchotech
+				ShipAirlockArchotech,
+				WreckedHull,
+				WrechedHullFake,
+				SmallCornerHull,
+				SmallCornerHullFlipped,
+				MediumCornerHull,
+				MediumCornerHullFlipped,
+				LargeCornerHull,
+				LargeCornerHullFlipped
 			};
 
 			var vents = new List<ThingDef>()
@@ -104,7 +121,9 @@ namespace Replace_Stuff_Compatibility.ModPatch
 			));
 
 			// All Wall-Like items should be interchangeable
-			AddInterchangeableList(wallsAndSimilar);
+			NewThingReplacement.replacements.Add(new NewThingReplacement.Replacement(
+				item => item.IsWall() || wallsAndSimilar.Contains(item)
+				));
 
 			// The ship reactors are interchangeable
 			AddInterchangeableList(Ship_Reactor, ArchotechAntimatterReactor);
